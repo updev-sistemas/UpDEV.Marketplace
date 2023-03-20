@@ -11,9 +11,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructures", "Infrastr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessRules", "BusinessRules", "{0B9A2579-7ED2-4EE2-8E7B-3D035A33DE44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "src\Common\Common.csproj", "{12C76E47-0D0E-4359-9652-2927A32AAFC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "src\Entities\Entities.csproj", "{FDE43F7C-5CF6-4DFF-8CF4-A1A2F202CE0A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12C76E47-0D0E-4359-9652-2927A32AAFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C76E47-0D0E-4359-9652-2927A32AAFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C76E47-0D0E-4359-9652-2927A32AAFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C76E47-0D0E-4359-9652-2927A32AAFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE43F7C-5CF6-4DFF-8CF4-A1A2F202CE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE43F7C-5CF6-4DFF-8CF4-A1A2F202CE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE43F7C-5CF6-4DFF-8CF4-A1A2F202CE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE43F7C-5CF6-4DFF-8CF4-A1A2F202CE0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{12C76E47-0D0E-4359-9652-2927A32AAFC2} = {ADC79997-0FC9-4006-AA08-D65B679966D1}
+		{FDE43F7C-5CF6-4DFF-8CF4-A1A2F202CE0A} = {ADC79997-0FC9-4006-AA08-D65B679966D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {626E66DB-2551-42BE-A488-7FCF0157931E}
