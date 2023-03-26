@@ -1,6 +1,6 @@
 ﻿using UpDEV.Marketplace.Domains.Common.Database;
 
-namespace UpDEV.Marketplace.Domains.Catalog 
+namespace UpDEV.Marketplace.Domains.Catalog.Entities
 {
     public class ProductEntity : EntityBase
     {
@@ -9,7 +9,7 @@ namespace UpDEV.Marketplace.Domains.Catalog
         public virtual string? Description { get; set; }
         public virtual string? HtmlDescription { get; set; }
         public virtual string? Thumbnail { get; set; } = "product-default.png";
-        public virtual IEnumerable<string>? Images { get; set; } = Array.Empty<string>();
+        public virtual string? Images { get; set; }
         public virtual bool? IsVirtual { get; set; }
         public virtual bool? ToOrder { get; set; } = false; // Feito sobre encomenda
         public virtual bool? AccceptedToOrder { get; set; } = false; // Está aceitando encomenda

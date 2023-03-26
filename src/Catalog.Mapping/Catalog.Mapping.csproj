@@ -7,5 +7,35 @@
 		<AssemblyName>UpDEV.Marketplace.Infrastructures.Database.Catalog.Mapping</AssemblyName>
 		<RootNamespace>UpDEV.Marketplace.Infrastructures.Database.Catalog.Mapping</RootNamespace>
 	</PropertyGroup>
+	
+	<ItemGroup>
+		<None Remove="BrandEntity.hbm.xml" />
+		<None Remove="CategoryEntity.hbm.xml" />
+		<None Remove="GroupEntity.hbm.xml" />
+		<None Remove="ProductEntity.hbm.xml" />
+		<None Remove="ProductPropertyEntity.hbm.xml" />
+		<None Remove="SectionEntity.hbm.xml" />
+		<None Remove="SubcategoryEntity.hbm.xml" />
+		<None Remove="UnitEntity.hbm.xml" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<EmbeddedResource Include="BrandEntity.hbm.xml" />
+		<EmbeddedResource Include="CategoryEntity.hbm.xml" />
+		<EmbeddedResource Include="GroupEntity.hbm.xml" />
+		<EmbeddedResource Include="ProductEntity.hbm.xml" />
+		<EmbeddedResource Include="ProductPropertyEntity.hbm.xml" />
+		<EmbeddedResource Include="SectionEntity.hbm.xml" />
+		<EmbeddedResource Include="SubcategoryEntity.hbm.xml" />
+		<EmbeddedResource Include="UnitEntity.hbm.xml" />
+	</ItemGroup>
 
+
+	<ItemGroup>
+		<PackageReference Include="FluentNHibernate" Version="3.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Catalog.Entities\Catalog.Entities.csproj" />
+	</ItemGroup>
 </Project>

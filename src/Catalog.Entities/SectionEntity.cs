@@ -1,7 +1,7 @@
 ﻿using UpDEV.Marketplace.Domains.Common.Database;
 using UpDEV.Marketplace.Domains.Common.Enumerables;
 
-namespace UpDEV.Marketplace.Domains.Catalog
+namespace UpDEV.Marketplace.Domains.Catalog.Entities
 {
     public class SectionEntity : EntityBase
     {

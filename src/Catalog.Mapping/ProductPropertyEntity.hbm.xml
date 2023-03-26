@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="UpDEV.Marketplace.Domains.Catalog.Entities"
+				   assembly="UpDEV.Marketplace.Domains.Catalog">
+
+	<class name="ProductPropertyEntity" table="catalog.product_properties" where="deleted_at is null">
+		<id name="Id" column="Id">
+			<generator class="identity" />
+		</id>
+
+		<property name="Key" column="pp_key" />
+		<property name="Value" column="pp_value" />
+		<property name="IsMandatory" column="is_mandatory" />
+		
+		<many-to-one name="Product" column="product_id" not-null="true" lazy="false" fetch="join" />
+
+		<property name="CreatedAt" column="created_at" update="false" />
+		<property name="UpdatedAt" column="updated_at" />
+		<property name="DeletedAt" column="deleted_at" />
+	</class>
+</hibernate-mapping>

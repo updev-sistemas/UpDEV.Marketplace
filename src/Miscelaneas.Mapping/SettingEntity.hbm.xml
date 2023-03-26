@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="UpDEV.Marketplace.Domains.Miscelaneas.Entities"
+				   assembly="UpDEV.Marketplace.Domains.Miscelaneas">
+
+	<class name="SettingEntity" table="miscelaneas.settings" where="deleted_at is null">
+
+		<id name="Id" column="id">
+			<generator class="identity" />
+		</id>
+
+		<property name="Key" column="stt_key" />
+		<property name="Value" column="stt_value" />
+
+		<property name="CreatedAt" column="created_at" update="false" />
+		<property name="UpdatedAt" column="updated_at" />
+		<property name="DeletedAt" column="deleted_at" />
+	</class>
+</hibernate-mapping>
