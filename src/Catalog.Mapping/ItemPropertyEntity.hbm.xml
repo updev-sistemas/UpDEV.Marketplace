@@ -3,11 +3,17 @@
 				   namespace="UpDEV.Marketplace.Domains.Catalog.Entities"
 				   assembly="UpDEV.Marketplace.Domains.Catalog">
 
-	<class name="ProductPropertyEntity" table="catalogs.items_property" where="deleted_at is null">
+	<class name="ItemPropertyEntity" table="catalogs.items_property" where="deleted_at is null">
 
 		<id name="Id" column="id">
 			<generator class="identity" />
 		</id>
+
+		<many-to-one name="Item" column="item_id" lazy="false" fetch="join" />
+		
+		<property name="Key" column="ip_key" />
+		<property name="Value" column="ip_value" />
+		<property name="IsMandatory" column="is_mandatory" />
 
 		<property name="CreatedAt" column="created_at" update="false" />
 		<property name="UpdatedAt" column="updated_at" />

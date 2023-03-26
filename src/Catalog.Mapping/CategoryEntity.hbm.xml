@@ -9,6 +9,11 @@
 			<generator class="identity" />
 		</id>
 
+		<property name="Name" column="name" />
+		<property name="Description" column="description" />
+
+		<many-to-one name="Section" column="section_id" lazy="false" fetch="join" />
+		
 		<property name="CreatedAt" column="created_at" update="false" />
 		<property name="UpdatedAt" column="updated_at" />
 		<property name="DeletedAt" column="deleted_at" />

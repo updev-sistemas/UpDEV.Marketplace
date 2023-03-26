@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="UpDEV.Marketplace.Domains.Catalog.Entities"
+				   assembly="UpDEV.Marketplace.Domains.Catalog">
+
+	<class name="ItemEntity" table="catalogs.items" where="deleted_at is null">
+		<id name="Id" column="id">
+			<generator class="identity" />
+		</id>
+
+		<property name="IsService" column="is_service" />
+		<property name="Code" column="code" />
+		<property name="Name" column="name" />
+		<property name="Description" column="description" />
+		<property name="HtmlDescription" column="html_description" />
+		<property name="Images" column="images" />
+		<property name="IsVirtual" column="is_virtual" />
+		<property name="Thumbnail" column="thumbnail" />
+		<property name="ToOrder" column="to_order" />
+		<property name="AccceptedToOrder" column="acccepted_to_order" />
+		<property name="ControlledProduction" column="controlled_production" />
+
+		<many-to-one name="Subcategory" column="subcategory_id" lazy="false" fetch="join" />
+		<many-to-one name="BasicUnit" column="basic_unit_id" lazy="false" fetch="join" />
+		<many-to-one name="SalesUnit" column="sales_unit_id" lazy="false" fetch="join" />
+		<many-to-one name="Group" column="group_id" lazy="false" fetch="join" />
+		
+		<bag name="Properties">
+			<key column="item_id" />
+			<one-to-many class="ItemPropertyEntity" />
+		</bag>
+		
+		<property name="CreatedAt" column="created_at" update="false" />
+		<property name="UpdatedAt" column="updated_at" />
+		<property name="DeletedAt" column="deleted_at" />
+	</class>
+</hibernate-mapping>
