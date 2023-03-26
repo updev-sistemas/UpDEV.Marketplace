@@ -8,6 +8,11 @@
 		<id name="Id" column="id">
 			<generator class="identity" />
 		</id>
+		
+		<property name="Name" column="name" />
+		<property name="Description" column="description" />
+
+		<many-to-one name="Category" column="category_id" lazy="false" fetch="join" />
 
 		<property name="CreatedAt" column="created_at" update="false" />
 		<property name="UpdatedAt" column="updated_at" />

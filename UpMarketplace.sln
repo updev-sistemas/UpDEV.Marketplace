@@ -43,19 +43,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxBookkeeping.Mapping", "s
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wms.Mapping", "src\Wms.Mapping\Wms.Mapping.csproj", "{5F2A3FA1-AA16-4147-B475-131D13EE86A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Mapping", "src\Catalog.Mapping\Catalog.Mapping.csproj", "{1B39F7A6-1042-4B3C-881B-6543B835C1E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Mapping", "src\Catalog.Mapping\Catalog.Mapping.csproj", "{1B39F7A6-1042-4B3C-881B-6543B835C1E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Entities", "src\Catalog.Entities\Catalog.Entities.csproj", "{44551AD2-AC2B-4EB4-8280-15C6F991FD64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.Entities", "src\Catalog.Entities\Catalog.Entities.csproj", "{44551AD2-AC2B-4EB4-8280-15C6F991FD64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authority.Entities", "src\Authority.Entities\Authority.Entities.csproj", "{EA0610F0-1D5A-4559-A3EE-C64701E6D34D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authority.Entities", "src\Authority.Entities\Authority.Entities.csproj", "{EA0610F0-1D5A-4559-A3EE-C64701E6D34D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inbound.Entities", "src\Inbound.Entities\Inbound.Entities.csproj", "{A744D4A0-6316-47A3-B9AA-7557F805BDF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inbound.Entities", "src\Inbound.Entities\Inbound.Entities.csproj", "{A744D4A0-6316-47A3-B9AA-7557F805BDF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Outbound.Entities", "src\Outbound.Entities\Outbound.Entities.csproj", "{BF3A4578-2577-4E73-B885-A9085907E27F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Outbound.Entities", "src\Outbound.Entities\Outbound.Entities.csproj", "{BF3A4578-2577-4E73-B885-A9085907E27F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxBookkeeping.Entities", "src\TaxBookkeeping.Entities\TaxBookkeeping.Entities.csproj", "{E12091A5-321D-4F0B-B951-107CC1F4EF6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxBookkeeping.Entities", "src\TaxBookkeeping.Entities\TaxBookkeeping.Entities.csproj", "{E12091A5-321D-4F0B-B951-107CC1F4EF6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WMS.Entities", "src\WMS.Entities\WMS.Entities.csproj", "{AB07D5C3-CF56-43A5-9E64-2AB6140D652B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WMS.Entities", "src\WMS.Entities\WMS.Entities.csproj", "{AB07D5C3-CF56-43A5-9E64-2AB6140D652B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRM.Entities", "src\CRM.Entities\CRM.Entities.csproj", "{3913AA76-1BCC-4103-8213-D9FFEDC53679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +133,10 @@ Global
 		{AB07D5C3-CF56-43A5-9E64-2AB6140D652B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB07D5C3-CF56-43A5-9E64-2AB6140D652B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB07D5C3-CF56-43A5-9E64-2AB6140D652B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3913AA76-1BCC-4103-8213-D9FFEDC53679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3913AA76-1BCC-4103-8213-D9FFEDC53679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3913AA76-1BCC-4103-8213-D9FFEDC53679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3913AA76-1BCC-4103-8213-D9FFEDC53679}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,6 +165,7 @@ Global
 		{BF3A4578-2577-4E73-B885-A9085907E27F} = {ADC79997-0FC9-4006-AA08-D65B679966D1}
 		{E12091A5-321D-4F0B-B951-107CC1F4EF6E} = {ADC79997-0FC9-4006-AA08-D65B679966D1}
 		{AB07D5C3-CF56-43A5-9E64-2AB6140D652B} = {ADC79997-0FC9-4006-AA08-D65B679966D1}
+		{3913AA76-1BCC-4103-8213-D9FFEDC53679} = {ADC79997-0FC9-4006-AA08-D65B679966D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {626E66DB-2551-42BE-A488-7FCF0157931E}
