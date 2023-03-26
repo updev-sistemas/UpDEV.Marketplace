@@ -1,9 +1,5 @@
-using NHibernate;
-using System.Xml.Linq;
 using UpDEV.Marketplace.Domains.CRM.Entities;
-using UpDEV.Marketplace.Domains.Miscelaneas.Entities;
 using UpDEV.Marketplace.Infrastructures.DatabaseFactory.Factory;
-using static NHibernate.Engine.Query.CallableParser;
 
 namespace WorkerService
 {
@@ -25,11 +21,36 @@ namespace WorkerService
                 using var session = _factory!.OpenSession();
                 try
                 {
-                    var suppliers = session.Query<SupplierEntity>().ToArray();
-                    _ = suppliers;
+                    var person = new PersonEntity
+                    {
+                        Birthday = new DateTime(1989,10,27),
+                        Email = "falecomoantonio@live.com",
+                        Name = "Antonio José",
+                        Observation = "Novo Cliente Teste",
+                        Phone1 = "(88) 9 8143-1663",
+                        Phone2 = "(88) 2149-0005",
+                        Surname = "Barros",
+                        CreatedAt = DateTime.Now,
+                        UpdatedAt = DateTime.Now,
+                    };
 
-                    var people = session.Query<PersonEntity>().ToArray();
-                    _ = people;
+                    var customer = new CustomerEntity
+                    {
+                        CreatedAt = DateTime.Now,   
+                        UpdatedAt = DateTime.Now,
+                        Person = person
+                    };
+
+                    var supplier = new SupplierEntity
+                    {
+                        CreatedAt = DateTime.Now,
+                        UpdatedAt = DateTime.Now,
+                        Person = person
+                    };
+
+                    await session.SaveOrUpdateAsync(supplier, stoppingToken).ConfigureAwait(false);
+                    await session.SaveOrUpdateAsync(customer, stoppingToken).ConfigureAwait(false);
+                    await session.FlushAsync(stoppingToken).ConfigureAwait(false);
 
                     _logger!.LogInformation("Deu certo.");
                 }

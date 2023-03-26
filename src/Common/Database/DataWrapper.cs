@@ -31,4 +31,13 @@ namespace UpDEV.Marketplace.Domains.Common.Database
         {
         }
     }
+
+    public class ProductSectionTypeEnumWrapper : AnsiEnumStringType
+    {
+        public ProductSectionTypeEnumWrapper()
+            : base(typeof(ProductSectionType), 30)
+        {
+        }
+    }
 }
+

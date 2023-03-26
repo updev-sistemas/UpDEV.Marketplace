@@ -14,10 +14,12 @@
 	  <None Remove="EnterpriseEntity.hbm.xml" />
 	  <None Remove="MacroRegionEntity.hbm.xml" />
 	  <None Remove="RegionEntity.hbm.xml" />
+	  <None Remove="SettingEntity.hbm.xml" />
 	  <None Remove="StateEntity.hbm.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Include="SettingEntity.hbm.xml" />
 	  <EmbeddedResource Include="CityEntity.hbm.xml" />
 	  <EmbeddedResource Include="CountryEntity.hbm.xml" />
 	  <EmbeddedResource Include="EnterpriseEntity.hbm.xml" />

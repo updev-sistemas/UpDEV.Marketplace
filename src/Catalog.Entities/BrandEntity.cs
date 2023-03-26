@@ -1,6 +1,6 @@
 ﻿using UpDEV.Marketplace.Domains.Common.Database;
 
-namespace UpDEV.Marketplace.Domains.Catalog
+namespace UpDEV.Marketplace.Domains.Catalog.Entities
 {
     public class BrandEntity : EntityBase
     {

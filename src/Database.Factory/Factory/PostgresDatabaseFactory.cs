@@ -25,6 +25,7 @@ namespace UpDEV.Marketplace.Infrastructures.DatabaseFactory.Factory
                     {
                         m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.CRM.Mapping"));
                         m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Miscelaneas.Mapping"));
+                        // m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Catalog.Mapping"));
                     })
                     .ExposeConfiguration(cfg =>
                     {
