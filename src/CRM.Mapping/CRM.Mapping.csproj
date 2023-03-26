@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>UpDEV.Marketplace.Infrastructures.Database.CRM.Mapping</AssemblyName>
+		<RootNamespace>UpDEV.Marketplace.Infrastructures.Database.CRM.Mapping</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="CustomerEntity.hbm.xml" />
+	  <None Remove="PersonAddressEntity.hbm.xml" />
+	  <None Remove="PersonDocumentEntity.hbm.xml" />
+	  <None Remove="PersonEntity.hbm.xml" />
+	  <None Remove="ShippingCompanyEntity.hbm.xml" />
+	  <None Remove="SupplierEntity.hbm.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="CustomerEntity.hbm.xml" />
+	  <EmbeddedResource Include="PersonAddressEntity.hbm.xml" />
+	  <EmbeddedResource Include="PersonDocumentEntity.hbm.xml" />
+	  <EmbeddedResource Include="PersonEntity.hbm.xml" />
+	  <EmbeddedResource Include="ShippingCompanyEntity.hbm.xml" />
+	  <EmbeddedResource Include="SupplierEntity.hbm.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\CRM.Entities\CRM.Entities.csproj" />
+	</ItemGroup>
+
+</Project>

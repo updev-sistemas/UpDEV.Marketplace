@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>UpDEV.Marketplace.Infrastructures.Database.Miscelaneas.Mapping</AssemblyName>
+		<RootNamespace>UpDEV.Marketplace.Infrastructures.Database.Miscelaneas.Mapping</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="CityEntity.hbm.xml" />
+	  <None Remove="CountryEntity.hbm.xml" />
+	  <None Remove="EnterpriseEntity.hbm.xml" />
+	  <None Remove="MacroRegionEntity.hbm.xml" />
+	  <None Remove="RegionEntity.hbm.xml" />
+	  <None Remove="StateEntity.hbm.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="CityEntity.hbm.xml" />
+	  <EmbeddedResource Include="CountryEntity.hbm.xml" />
+	  <EmbeddedResource Include="EnterpriseEntity.hbm.xml" />
+	  <EmbeddedResource Include="MacroRegionEntity.hbm.xml" />
+	  <EmbeddedResource Include="RegionEntity.hbm.xml" />
+	  <EmbeddedResource Include="StateEntity.hbm.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="FluentNHibernate" Version="3.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Miscelaneas.Entities\Miscelaneas.Entities.csproj" />
+	</ItemGroup>
+
+</Project>

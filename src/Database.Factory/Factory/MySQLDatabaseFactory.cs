@@ -2,10 +2,6 @@
 using FluentNHibernate.Cfg;
 using NHibernate;
 using System.Reflection;
-using FluentNHibernate.Conventions.Helpers;
-using UpDEV.Marketplace.Infrastructures.DatabaseFactory.Mappings;
-using UpDEV.Marketplace.Domains.Entities;
-using NHibernate.Tool.hbm2ddl;
 
 namespace UpDEV.Marketplace.Infrastructures.DatabaseFactory.Factory
 {
@@ -26,23 +22,9 @@ namespace UpDEV.Marketplace.Infrastructures.DatabaseFactory.Factory
                 .Mappings(m =>
                 {
                     m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly());
-
-                    m.FluentMappings.Conventions.Setup(m => m.Add(AutoImport.Never()))
-                                    .AddFromAssemblyOf<BrandMap>()
-                                    .AddFromAssemblyOf<CategoryMap>()
-                                    .AddFromAssemblyOf<CityMap>()
-                                    .AddFromAssemblyOf<CustomerMap>()
-                                    .AddFromAssemblyOf<MacroRegionMap>()
-                                    .AddFromAssemblyOf<PackageMap>()
-                                    .AddFromAssemblyOf<PersonMap>()
-                                    .AddFromAssemblyOf<PersonAddressMap>()
-                                    .AddFromAssemblyOf<ProductMap>()
-                                    .AddFromAssemblyOf<RegionMap>()
-                                    .AddFromAssemblyOf<SectionMap>()
-                                    .AddFromAssemblyOf<SkuMap>()
-                                    .AddFromAssemblyOf<StateMap>()
-                                    .AddFromAssemblyOf<SupplierMap>()
-                                    .AddFromAssemblyOf<UnitMap>();
+                    //m.FluentMappings.Conventions.Setup(m => m.Add(AutoImport.Never()))
+                    //                .AddFromAssembly(typeof(StateMap).Assembly)
+                    //                .AddFromAssembly(typeof(PersonMap).Assembly);
 
                 })
                 .ExposeConfiguration(cfg =>

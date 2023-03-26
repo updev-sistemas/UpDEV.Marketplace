@@ -3,6 +3,8 @@
     public enum CityZone
     {
         URBAN = 0,
-        RURAL = 1
+        RURAL = 1,
+        METROPOLITAN = 2,
+        CAPITAL = 3
     }
 }

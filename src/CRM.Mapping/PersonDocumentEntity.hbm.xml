@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="UpDEV.Marketplace.Domains.CRM.Entities"
+				   assembly="UpDEV.Marketplace.Domains.CRM">
+
+	<class name="PersonDocumentEntity" table="crm.people_documents"  where="deleted_at is null">
+		<id name="Id" column="Id">
+			<generator class="identity" />
+		</id>
+
+		<many-to-one name="Person" column="person_id" lazy="false" fetch="join" />
+
+		<property name="LegalType" column="legal_type" type="UpDEV.Marketplace.Domains.Common.Database.PersonLegalTypeEnumWrapper, UpDEV.Marketplace.Domains.Common"/>
+		<property name="DocHash" column="doc_hash" />
+		<property name="DocPayload" column="doc_payload" />
+
+		<property name="CreatedAt" column="created_at" update="false" />
+		<property name="UpdatedAt" column="updated_at" />
+		<property name="DeletedAt" column="deleted_at" />
+	</class>
+</hibernate-mapping>
