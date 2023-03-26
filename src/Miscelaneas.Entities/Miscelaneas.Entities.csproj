@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	  <AssemblyName>UpDEV.Marketplace.Domains.Miscelaneas</AssemblyName>
-	  <RootNamespace>UpDEV.Marketplace.Domains.Miscelaneas</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<AssemblyName>UpDEV.Marketplace.Domains.Miscelaneas</AssemblyName>
+		<RootNamespace>UpDEV.Marketplace.Domains.Miscelaneas</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Common\Common.csproj" />
+	</ItemGroup>
 
 </Project>

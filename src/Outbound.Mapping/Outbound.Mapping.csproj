@@ -8,4 +8,8 @@
 	  <RootNamespace>UpDEV.Marketplace.Infrastructures.Database.Outbound.Mapping</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Outbound.Entities\Outbound.Entities.csproj" />
+  </ItemGroup>
+
 </Project>

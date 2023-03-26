@@ -23,9 +23,14 @@ namespace UpDEV.Marketplace.Infrastructures.DatabaseFactory.Factory
                     .Database(PostgreSQLConfiguration.Standard.ConnectionString(connectionString!).ShowSql())
                     .Mappings(m =>
                     {
+                        m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Authority.Mapping"));
+                        m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Catalog.Mapping"));
                         m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.CRM.Mapping"));
+                        m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Inbound.Mapping"));
                         m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Miscelaneas.Mapping"));
-                        // m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Catalog.Mapping"));
+                        m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.Outbound.Mapping"));
+                        m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.TaxBookkeeping.Mapping"));
+                        m.HbmMappings.AddFromAssembly(Assembly.Load("UpDEV.Marketplace.Infrastructures.Database.WMS.Mapping"));
                     })
                     .ExposeConfiguration(cfg =>
                     {

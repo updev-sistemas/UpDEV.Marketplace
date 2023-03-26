@@ -8,4 +8,8 @@
 	  <RootNamespace>UpDEV.Marketplace.Infrastructures.Database.Authority.Mapping</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Authority.Entities\Authority.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
