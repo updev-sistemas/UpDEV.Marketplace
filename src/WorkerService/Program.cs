@@ -4,7 +4,7 @@ using WorkerService;
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
     {
-        services.AddDatabaseFactory(hostContext.Configuration);
+        services.AddDatabaseFactory(hostContext.Configuration, "postgres");
 
         services.AddHostedService<Worker>();
     })

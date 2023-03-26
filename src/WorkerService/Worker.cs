@@ -1,5 +1,9 @@
-using UpDEV.Marketplace.Domains.Entities;
+using NHibernate;
+using System.Xml.Linq;
+using UpDEV.Marketplace.Domains.CRM.Entities;
+using UpDEV.Marketplace.Domains.Miscelaneas.Entities;
 using UpDEV.Marketplace.Infrastructures.DatabaseFactory.Factory;
+using static NHibernate.Engine.Query.CallableParser;
 
 namespace WorkerService
 {
@@ -21,15 +25,11 @@ namespace WorkerService
                 using var session = _factory!.OpenSession();
                 try
                 {
-                    var brand = new BrandEntity
-                    {
-                        Name = "Coca Cola",
-                        CreatedAt = DateTime.UtcNow,
-                        UpdatedAt = DateTime.UtcNow,
-                    };
+                    var suppliers = session.Query<SupplierEntity>().ToArray();
+                    _ = suppliers;
 
-                    await session.SaveOrUpdateAsync(brand).ConfigureAwait(false);
-                    await session.FlushAsync().ConfigureAwait(false);
+                    var people = session.Query<PersonEntity>().ToArray();
+                    _ = people;
 
                     _logger!.LogInformation("Deu certo.");
                 }

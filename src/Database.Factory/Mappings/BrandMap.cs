@@ -8,6 +8,7 @@ namespace UpDEV.Marketplace.Infrastructures.DatabaseFactory.Mappings
         public BrandMap()
         {
             Table("brands");
+            Schema("");
             Where("deleted_at is null");
 
             Id(pk => pk.Id).Column("id").GeneratedBy.Guid();

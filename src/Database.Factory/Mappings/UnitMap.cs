@@ -1,5 +1,4 @@
 ﻿using FluentNHibernate.Mapping;
-using UpDEV.Marketplace.Domains.Entities;
 
 namespace UpDEV.Marketplace.Infrastructures.DatabaseFactory.Mappings
 {

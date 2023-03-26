@@ -9,17 +9,25 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Mappings\**" />
+	  <EmbeddedResource Remove="Mappings\**" />
+	  <None Remove="Mappings\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="FluentNHibernate" Version="3.1.0" />
 		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
 		<PackageReference Include="MySql.Data" Version="8.0.32.1" />
 		<PackageReference Include="NHibernate" Version="5.4.1" />
 		<PackageReference Include="NHibernate.Driver.MySqlConnector" Version="2.0.4" />
+		<PackageReference Include="Npgsql" Version="7.0.2" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Entities\Entities.csproj" />
+	  <ProjectReference Include="..\CRM.Mapping\CRM.Mapping.csproj" />
+	  <ProjectReference Include="..\Miscelaneas.Mapping\Miscelaneas.Mapping.csproj" />
 	</ItemGroup>
 
 </Project>
