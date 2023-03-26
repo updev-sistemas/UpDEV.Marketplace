@@ -1,10 +1,11 @@
 ﻿using UpDEV.Marketplace.Domains.Common.Database;
+using UpDEV.Marketplace.Domains.Common.Enumerables;
 
 namespace UpDEV.Marketplace.Domains.Catalog.Entities
 {
     public class ItemEntity : EntityBase
     {
-        public virtual bool? IsService { get; set; }
+        public virtual ItemType? Type { get; set; }
         public virtual string? Code { get; set; }
         public virtual string? Name { get; set; }
         public virtual string? Description { get; set; }

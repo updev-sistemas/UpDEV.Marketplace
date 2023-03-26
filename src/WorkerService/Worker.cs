@@ -80,7 +80,7 @@ namespace WorkerService
                     {
                         CreatedAt = DateTime.UtcNow,
                         UpdatedAt = DateTime.UtcNow,
-                        IsService = false,
+                        Type = UpDEV.Marketplace.Domains.Common.Enumerables.ItemType.PRODUCT,
                         Code = "1200",
                         Name = "Produto Padrão 1",
                         Description = "Produto Padrão 1",
