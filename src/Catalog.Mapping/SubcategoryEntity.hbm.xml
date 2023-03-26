@@ -3,18 +3,4 @@
 				   namespace="UpDEV.Marketplace.Domains.Catalog.Entities"
 				   assembly="UpDEV.Marketplace.Domains.Catalog">
 
-	<class name="SubcategoryEntity" table="catalog.subcategories" where="deleted_at is null">
-		<id name="Id" column="Id">
-			<generator class="identity" />
-		</id>
-
-		<many-to-one name="Category" column="category_id" lazy="false" fetch="join" />
-		
-		<property name="Name" column="name" />
-		<property name="Description" column="description" />
-
-		<property name="CreatedAt" column="created_at" update="false" />
-		<property name="UpdatedAt" column="updated_at" />
-		<property name="DeletedAt" column="deleted_at" />
-	</class>
 </hibernate-mapping>

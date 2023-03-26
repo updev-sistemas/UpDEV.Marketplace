@@ -3,35 +3,4 @@
 				   namespace="UpDEV.Marketplace.Domains.Catalog.Entities"
 				   assembly="UpDEV.Marketplace.Domains.Catalog">
 
-	<class name="ProductEntity" table="catalog.products" where="deleted_at is null">
-
-		<id name="Id" column="Id">
-			<generator class="identity" />
-		</id>
-
-		<many-to-one name="BasicUnit" column="basic_unit_id" lazy="false" fetch="join" />
-		<many-to-one name="SalesUnit" column="sales_unit_id" lazy="false" fetch="join" />
-		<many-to-one name="Group" column="group_id" lazy="false" fetch="join" />
-		<many-to-one name="Subcategory" column="subcategory_id" lazy="false" fetch="join" />
-
-		<property name="Code" column="Code" update="false" />
-		<property name="Name" column="Name" />
-		<property name="Description" column="Description" />
-		<property name="HtmlDescription" column="HtmlDescription" />
-		<property name="Thumbnail" column="Thumbnail" />
-		<property name="IsVirtual" column="IsVirtual" />
-		<property name="ToOrder" column="ToOrder" />
-		<property name="AccceptedToOrder" column="AccceptedToOrder" />
-		<property name="ControlledProduction" column="ControlledProduction" />
-		<property name="Images" column="images" />
-		
-		<bag name="Properties">
-			<key column="product_id" />
-			<one-to-many class="ProductPropertyEntity" />
-		</bag>
-		
-		<property name="CreatedAt" column="created_at" update="false" />
-		<property name="UpdatedAt" column="updated_at" />
-		<property name="DeletedAt" column="deleted_at" />
-	</class>
 </hibernate-mapping>
