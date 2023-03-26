@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-				   namespace="UpDEV.Marketplace.Domains.Catalog.Entities"
-				   assembly="UpDEV.Marketplace.Domains.Catalog">
+				   namespace="UpDEV.Marketplace.Domains.CRM.Entities"
+				   assembly="UpDEV.Marketplace.Domains.CRM">
 
-	<class name="CategoryEntity" table="catalogs.item_categories" where="deleted_at is null">
+	<class name="SupplierEntity" table="crm.suppliers" where="deleted_at is null">
 
 		<id name="Id" column="id">
-			<generator class="identity" />
+			<generator class="foreign">
+				<param name="property">Person</param>
+			</generator>
 		</id>
+		<one-to-one name="Person" constrained="true" />
 
 		<property name="CreatedAt" column="created_at" update="false" />
 		<property name="UpdatedAt" column="updated_at" />

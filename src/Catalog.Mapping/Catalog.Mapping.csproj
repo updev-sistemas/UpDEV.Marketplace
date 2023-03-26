@@ -30,4 +30,8 @@
 		<EmbeddedResource Include="UnitEntity.hbm.xml" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Catalog.Entities\Catalog.Entities.csproj" />
+	</ItemGroup>
+
 </Project>

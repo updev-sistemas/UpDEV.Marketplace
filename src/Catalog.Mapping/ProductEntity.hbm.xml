@@ -3,4 +3,14 @@
 				   namespace="UpDEV.Marketplace.Domains.Catalog.Entities"
 				   assembly="UpDEV.Marketplace.Domains.Catalog">
 
+	<class name="ProductEntity" table="catalogs.items" where="deleted_at is null">
+
+		<id name="Id" column="id">
+			<generator class="identity" />
+		</id>
+
+		<property name="CreatedAt" column="created_at" update="false" />
+		<property name="UpdatedAt" column="updated_at" />
+		<property name="DeletedAt" column="deleted_at" />
+	</class>
 </hibernate-mapping>

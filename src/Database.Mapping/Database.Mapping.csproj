@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>UpDEV.Marketplace.Infrastructures.Database.Mapping</AssemblyName>
+    <RootNamespace>UpDEV.Marketplace.Infrastructures.Database.Mapping</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="CRM\CustomerEntity.hbm.xml" />
+    <None Remove="CRM\PersonAddressEntity.hbm.xml" />
+    <None Remove="CRM\PersonDocumentEntity.hbm.xml" />
+    <None Remove="CRM\PersonEntity.hbm.xml" />
+    <None Remove="CRM\ShippingCompanyEntity.hbm.xml" />
+    <None Remove="CRM\SupplierEntity.hbm.xml" />
+    <None Remove="Miscelaneas\CityEntity.hbm.xml" />
+    <None Remove="Miscelaneas\CountryEntity.hbm.xml" />
+    <None Remove="Miscelaneas\EnterpriseEntity.hbm.xml" />
+    <None Remove="Miscelaneas\MacroRegionEntity.hbm.xml" />
+    <None Remove="Miscelaneas\RegionEntity.hbm.xml" />
+    <None Remove="Miscelaneas\SettingEntity.hbm.xml" />
+    <None Remove="Miscelaneas\StateEntity.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="CRM\CustomerEntity.hbm.xml" />
+    <EmbeddedResource Include="CRM\PersonAddressEntity.hbm.xml" />
+    <EmbeddedResource Include="CRM\PersonDocumentEntity.hbm.xml" />
+    <EmbeddedResource Include="CRM\PersonEntity.hbm.xml" />
+    <EmbeddedResource Include="CRM\ShippingCompanyEntity.hbm.xml" />
+    <EmbeddedResource Include="CRM\SupplierEntity.hbm.xml" />
+    <EmbeddedResource Include="Miscelaneas\CityEntity.hbm.xml" />
+    <EmbeddedResource Include="Miscelaneas\CountryEntity.hbm.xml" />
+    <EmbeddedResource Include="Miscelaneas\EnterpriseEntity.hbm.xml" />
+    <EmbeddedResource Include="Miscelaneas\MacroRegionEntity.hbm.xml" />
+    <EmbeddedResource Include="Miscelaneas\RegionEntity.hbm.xml" />
+    <EmbeddedResource Include="Miscelaneas\SettingEntity.hbm.xml" />
+    <EmbeddedResource Include="Miscelaneas\StateEntity.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Authority\" />
+    <Folder Include="Inbound\" />
+    <Folder Include="Catalog\" />
+    <Folder Include="WMS\" />
+    <Folder Include="TaxBookkeeping\" />
+    <Folder Include="Outbound\" />
+  </ItemGroup>
+
+</Project>

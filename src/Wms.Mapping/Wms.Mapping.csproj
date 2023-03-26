@@ -8,4 +8,8 @@
 		<RootNamespace>UpDEV.Marketplace.Infrastructures.Database.WMS.Mapping</RootNamespace>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\WMS.Entities\WMS.Entities.csproj" />
+	</ItemGroup>
+
 </Project>

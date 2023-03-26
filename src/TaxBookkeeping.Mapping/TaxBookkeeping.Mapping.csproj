@@ -8,4 +8,8 @@
 		<RootNamespace>UpDEV.Marketplace.Infrastructures.Database.TaxBookkeeping.Mapping</RootNamespace>
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\TaxBookkeeping.Entities\TaxBookkeeping.Entities.csproj" />
+	</ItemGroup>
+
 </Project>

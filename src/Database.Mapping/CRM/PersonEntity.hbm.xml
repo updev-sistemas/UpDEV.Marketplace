@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="UpDEV.Marketplace.Domains.CRM.Entities"
+				   assembly="UpDEV.Marketplace.Domains.CRM">
+
+	<class name="PersonEntity" table="crm.people"  where="deleted_at is null">
+
+		<id name="Id" column="Id">
+			<generator class="identity" />
+		</id>
+		
+		<property name="Name" column="Name" />
+		<property name="Surname" column="Surname" />
+		<property name="Email" column="Email" />
+		<property name="Phone1" column="Phone1" />
+		<property name="Phone2" column="Phone2" />
+		<property name="Observation" column="Observation" />
+		<property name="Birthday" column="Birthday" />
+
+		<property name="CreatedAt" column="created_at" update="false" />
+		<property name="UpdatedAt" column="updated_at" />
+		<property name="DeletedAt" column="deleted_at" />
+	</class>
+</hibernate-mapping>

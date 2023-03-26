@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="UpDEV.Marketplace.Domains.Miscelaneas.Entities"
+				   assembly="UpDEV.Marketplace.Domains.Miscelaneas">
+
+	<class name="StateEntity" table="miscelaneas.states" where="deleted_at is null">
+
+		<id name="Id" column="Id">
+			<generator class="identity" />
+		</id>
+
+		<many-to-one name="Region" column="region_id" lazy="false" fetch="join" />
+
+		<property name="Uf" column="uf" update="false"  />
+		<property name="Name" column="name" />
+
+		<property name="CreatedAt" column="created_at" update="false" />
+		<property name="UpdatedAt" column="updated_at" />
+		<property name="DeletedAt" column="deleted_at" />
+	</class>
+</hibernate-mapping>

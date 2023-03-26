@@ -26,8 +26,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Authority.Mapping\Authority.Mapping.csproj" />
+	  <ProjectReference Include="..\Catalog.Mapping\Catalog.Mapping.csproj" />
 	  <ProjectReference Include="..\CRM.Mapping\CRM.Mapping.csproj" />
+	  <ProjectReference Include="..\Inbound.Mapping\Inbound.Mapping.csproj" />
 	  <ProjectReference Include="..\Miscelaneas.Mapping\Miscelaneas.Mapping.csproj" />
+	  <ProjectReference Include="..\Outbound.Mapping\Outbound.Mapping.csproj" />
+	  <ProjectReference Include="..\TaxBookkeeping.Mapping\TaxBookkeeping.Mapping.csproj" />
+	  <ProjectReference Include="..\Wms.Mapping\Wms.Mapping.csproj" />
 	</ItemGroup>
 
 </Project>
