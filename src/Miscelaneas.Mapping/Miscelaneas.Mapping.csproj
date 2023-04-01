@@ -32,4 +32,8 @@
 	  <PackageReference Include="FluentNHibernate" Version="3.1.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\Miscelaneas.Entities\Miscelaneas.Entities.csproj" />
+	</ItemGroup>
+
 </Project>

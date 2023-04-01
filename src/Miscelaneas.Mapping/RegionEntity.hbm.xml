@@ -11,7 +11,7 @@
 
 		<many-to-one name="Country" column="country_id" lazy="false" fetch="join" />
 		
-		<property name="Name" column="Name" />
+		<property name="Name" not-null="true" length="100" column="Name" />
 
 		<property name="CreatedAt" column="created_at" update="false" />
 		<property name="UpdatedAt" column="updated_at" />

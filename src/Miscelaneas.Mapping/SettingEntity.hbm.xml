@@ -9,8 +9,8 @@
 			<generator class="identity" />
 		</id>
 
-		<property name="Key" column="stt_key" />
-		<property name="Value" column="stt_value" />
+		<property name="Key" not-null="true" length="32" column="stt_key" />
+		<property name="Value" not-null="true" column="stt_value" />
 
 		<property name="CreatedAt" column="created_at" update="false" />
 		<property name="UpdatedAt" column="updated_at" />

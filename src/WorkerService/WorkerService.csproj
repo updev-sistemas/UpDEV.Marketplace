@@ -14,5 +14,6 @@
   <ItemGroup>
     <ProjectReference Include="..\CRM.Entities\CRM.Entities.csproj" />
     <ProjectReference Include="..\Database.Factory\Database.Factory.csproj" />
+    <ProjectReference Include="..\Database.Repositories\Database.Repositories.csproj" />
   </ItemGroup>
 </Project>

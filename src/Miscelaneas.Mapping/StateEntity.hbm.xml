@@ -11,8 +11,8 @@
 
 		<many-to-one name="Region" column="region_id" lazy="false" fetch="join" />
 
-		<property name="Uf" column="uf" update="false"  />
-		<property name="Name" column="name" />
+		<property name="Uf" length="3" not-null="true" column="uf" update="false"  />
+		<property name="Name" length="100" not-null="true" column="name" />
 
 		<property name="CreatedAt" column="created_at" update="false" />
 		<property name="UpdatedAt" column="updated_at" />

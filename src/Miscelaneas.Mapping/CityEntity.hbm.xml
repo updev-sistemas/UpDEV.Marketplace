@@ -11,12 +11,12 @@
 
 		<many-to-one name="MacroRegion" column="macro_region_id" lazy="false" fetch="join" />
 		
-		<property name="IbgeCode" column="ibge_code" update="false"  />
-		<property name="Name" column="name" />
-		<property name="DDD" column="ddd" update="false"  />
-		<property name="Latitude" column="latitude" update="false"  />
-		<property name="Longitude" column="longitude" update="false" />
-		<property name="Perimeter" column="perimeter" />
+		<property name="IbgeCode" not-null="true" column="ibge_code" length="20" update="false"  />
+		<property name="Name" not-null="true" column="name" length="100" />
+		<property name="DDD" not-null="true" column="ddd" update="false" />
+		<property name="Latitude" not-null="true" column="latitude" update="false" />
+		<property name="Longitude" not-null="true" column="longitude" update="false" />
+		<property name="Perimeter" not-null="true" column="perimeter" />
 
 		<property name="Zone" column="zone" type="UpDEV.Marketplace.Domains.Common.Database.CityZoneEnumWrapper, UpDEV.Marketplace.Domains.Common"/>
 		

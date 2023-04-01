@@ -11,7 +11,7 @@
 
 		<many-to-one name="State" column="state_id" lazy="false" fetch="join" />
 
-		<property name="Name" column="name" />
+		<property name="Name" not-null="true" length="100" column="name" />
 		<property name="IsActive" column="is_active" />
 
 		<property name="CreatedAt" column="created_at" update="false" />

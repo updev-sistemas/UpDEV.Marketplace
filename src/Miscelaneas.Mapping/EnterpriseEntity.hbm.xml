@@ -8,11 +8,12 @@
 		<id name="Id" column="Id">
 			<generator class="identity" />
 		</id>
-
-		<property name="Name" column="name" />
-		<property name="Document" column="document" update="false" />
-		<property name="Phone" column="phone" />
-		<property name="Email" column="email" />
+		
+		<property name="Document" length="32" not-null="true" column="document" unique="true" update="false" />
+		
+		<property name="Name" length="100" not-null="true" column="name" />
+		<property name="Phone" length="20" not-null="true" column="phone" />
+		<property name="Email" length="120" not-null="false" column="email" />
 		<property name="IsActive" column="is_active" />
 
 		<property name="CreatedAt" column="created_at" update="false" />

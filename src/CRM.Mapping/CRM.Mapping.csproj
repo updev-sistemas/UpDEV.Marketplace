@@ -30,4 +30,8 @@
 	  <PackageReference Include="FluentNHibernate" Version="3.1.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\CRM.Entities\CRM.Entities.csproj" />
+	</ItemGroup>
+
 </Project>
